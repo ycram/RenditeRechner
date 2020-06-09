@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Rendite Rechner</string>
+    <string name="textView_km">Kaltmiete</string>
+    <string name="textView_km_hint">in EUR pro m²</string>
+    <string name="textView_m2">Größe des Objekts</string>
+    <string name="textView_m2_hint">in m²</string>
+</resources>

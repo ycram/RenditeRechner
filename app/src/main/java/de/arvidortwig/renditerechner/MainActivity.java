@@ -1,16 +1,13 @@
 package de.arvidortwig.renditerechner;
 
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import static de.arvidortwig.renditerechner.R.id.textView_kaltmiete_gesamt;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
