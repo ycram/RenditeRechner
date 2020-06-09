@@ -1,14 +1,11 @@
-*.iml
-.gradle
+# Local machine specific file
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+
+# Gradle specific local files and build output
+.gradle/
+build/
+
+# AndroidStudio specific files
+.idea/
+*.iml
+
