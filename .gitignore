@@ -1,0 +1,11 @@
+# Local machine specific file
+/local.properties
+
+# Gradle specific local files and build output
+.gradle/
+build/
+
+# AndroidStudio specific files
+.idea/
+*.iml
+
