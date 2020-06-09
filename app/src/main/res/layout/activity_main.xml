@@ -6,74 +6,203 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <!-- Eingabe Kaltmiete -->
     <TextView
         android:id="@+id/textView_kaltmiete_m2"
         android:layout_width="170dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:text="@string/textView_km"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"  />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextNumber_kaltmiete_m2"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
         android:hint="@string/textView_km_hint"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/calc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Berechnen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <!-- Groesse m² -->
+    <TextView
+        android:id="@+id/textView_groesse_m2"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/textView_m2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView_kaltmiete_m2" />
 
     <EditText
         android:id="@+id/editTextNumber_groesse_m2"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
         android:ems="10"
         android:hint="@string/textView_m2_hint"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/editTextNumber_kaltmiete_m2" />
 
-    <TextView
-        android:id="@+id/textView_groesse_m2"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="64dp"
-        android:text="@string/textView_m2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    <!-- Ergebnis Kaltmiete Gesamt -->
     <TextView
         android:id="@+id/textView_kaltmiete_gesamt"
         android:layout_width="170dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="128dp"
-        android:text="Kaltmiete Gesamt"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/textView_km_gesamt"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/textView_groesse_m2" />
+
+    <TextView
+        android:id="@+id/textView_kaltmiete_gesamt_ergebnis"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/textView_km_gesamt_ergebnis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editTextNumber_groesse_m2" />
+
+    <!-- Nebenkosten -->
+    <TextView
+        android:id="@+id/textView_Nebenkosten"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/textView_nebenkosten"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView_kaltmiete_gesamt" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Nebenkosten"
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:hint="@string/textView_nebenkosten_hint"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView_kaltmiete_gesamt_ergebnis" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Nebenkosten_prozent"
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="105dp"
+        android:ems="10"
+        android:hint="@string/textView_nebenkosten_prozent_hint"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@id/editTextNumber_Nebenkosten"
+        app:layout_constraintTop_toTopOf="@id/textView_kaltmiete_gesamt_ergebnis" />
+
+
+    <!-- Stellplatz -->
+    <TextView
+        android:id="@+id/textView_Stellplatz"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/textView_stellplatz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView_Nebenkosten" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Stellplatz"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:hint="@string/textView_stellplatz_hint"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editTextNumber_Nebenkosten_prozent" />
+
+
+
+    <!-- Grundsteuer -->
+    <TextView
+        android:id="@+id/textView_Grundsteuer"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/textView_Grundsteuer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView_Stellplatz" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Grundsteuer"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:hint="@string/textView_Grundsteuer_hint"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editTextNumber_Stellplatz" />
+
+
+    <!-- Einnahmen -->
+    <TextView
+        android:id="@+id/textView_Einnahmen"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/textView_Einnahmen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView_Grundsteuer" />
+
+    <TextView
+        android:id="@+id/TextView_Einnahmen_Betrag"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:text="@string/textView_Einnahmen_Betrag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editTextNumber_Grundsteuer" />
+
+
+    <!-- Button, Switches -->
+    <Button
+        android:id="@+id/calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/button_calc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Switch
+        android:id="@+id/switch1_monat_jahr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switch1_monat_jahr"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

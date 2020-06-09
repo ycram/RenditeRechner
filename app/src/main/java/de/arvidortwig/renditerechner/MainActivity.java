@@ -24,14 +24,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //Berechnung der Kaltmiete
+
                 EditText groesse_m2 = (EditText) findViewById(R.id.editTextNumber_groesse_m2);
                 EditText kaltmiete_m2 = (EditText) findViewById(R.id.editTextNumber_kaltmiete_m2);
-                TextView kaltmiete_gesamt = (TextView) findViewById(R.id.textView_kaltmiete_gesamt);
+                TextView kaltmiete_gesamt_ergebnis = (TextView) findViewById(R.id.textView_kaltmiete_gesamt_ergebnis);
+                EditText nebenkosten = (EditText) findViewById(R.id.editTextNumber_Nebenkosten);
+                EditText nebenkosten_prozent = (EditText) findViewById(R.id.editTextNumber_Nebenkosten_prozent);
+                EditText stellplatz = (EditText) findViewById(R.id.editTextNumber_Stellplatz);
+                EditText grundsteuer = (EditText) findViewById(R.id.editTextNumber_Grundsteuer);
+                TextView einnahmen = (TextView) findViewById(R.id.textView_Einnahmen);
 
                 int int_groesse_m2=Integer.parseInt(groesse_m2.getText().toString());
                 int int_kaltmiete_m2=Integer.parseInt(kaltmiete_m2.getText().toString());
+                int int_nebenkosten=Integer.parseInt(nebenkosten.getText().toString());
+                int int_nebenkosten_prozent=Integer.parseInt(nebenkosten_prozent.getText().toString());
+                int int_stellplatz=Integer.parseInt(stellplatz.getText().toString());
+                int int_grundsteuer=Integer.parseInt(grundsteuer.getText().toString());
+
+
                 int int_kaltmiete_gesamt=int_groesse_m2*int_kaltmiete_m2;
-                kaltmiete_gesamt.setText(Integer.toString(int_kaltmiete_gesamt));
+                int int_einnahmen=int_kaltmiete_gesamt+int_stellplatz-int_grundsteuer-(int_nebenkosten-(int_nebenkosten*int_nebenkosten_prozent/100));
+
+                kaltmiete_gesamt_ergebnis.setText(Integer.toString(int_kaltmiete_gesamt));
+                einnahmen.setText(Integer.toString((int_einnahmen)));
+
+
+
+
+
             }
 
         });

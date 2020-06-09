@@ -4,4 +4,17 @@
     <string name="textView_km_hint">in EUR pro m²</string>
     <string name="textView_m2">Größe des Objekts</string>
     <string name="textView_m2_hint">in m²</string>
+    <string name="button_calc">Berechnen</string>
+    <string name="switch1_monat_jahr">Monat/Jahr</string>
+    <string name="textView_km_gesamt_ergebnis">EUR</string>
+    <string name="textView_km_gesamt">Kaltmiete Gesamt</string>
+    <string name="textView_nebenkosten">Nebenkosten/Hausgeld, davon umlegbar in %</string>
+    <string name="textView_nebenkosten_hint">in EUR</string>
+    <string name="textView_nebenkosten_prozent_hint">%</string>
+    <string name="textView_stellplatz">Stellplatz</string>
+    <string name="textView_stellplatz_hint">in EUR</string>
+    <string name="textView_Grundsteuer">Grundsteuer</string>
+    <string name="textView_Grundsteuer_hint">in EUR</string>
+    <string name="textView_Einnahmen">Einnahmen</string>
+    <string name="textView_Einnahmen_Betrag">in EUR</string>
 </resources>
