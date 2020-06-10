@@ -57,24 +57,12 @@ public class MainActivity extends AppCompatActivity {
                 int_kaltmiete_gesamt=int_groesse_m2*int_kaltmiete_m2;
                 int_einnahmen=int_kaltmiete_gesamt+int_stellplatz-int_grundsteuer-(int_nebenkosten-(int_nebenkosten*int_nebenkosten_prozent/100));
 
-                //kaltmiete_gesamt_ergebnis.setText(Integer.toString(int_kaltmiete_gesamt));
-                //einnahmen.setText(Integer.toString((int_einnahmen)));
-
-
-                        if(monatjahr.getText().toString().equals("on"))
-                        {
-                            int_kaltmiete_gesamt= int_kaltmiete_gesamt*12;
-                            int_einnahmen =  int_einnahmen*12;
-                            kaltmiete_gesamt_ergebnis.setText(Integer.toString(int_kaltmiete_gesamt));
-                            einnahmen.setText(Integer.toString((int_einnahmen)));
-
-                        }
-
-                        else if(monatjahr.getText().toString().equals("off"))
-                        {
-                            kaltmiete_gesamt_ergebnis.setText(Integer.toString(int_kaltmiete_gesamt));
-                            einnahmen.setText(Integer.toString((int_einnahmen)));
-                        }
+                if (monatjahr.isChecked()) {
+                    int_kaltmiete_gesamt = int_kaltmiete_gesamt * 12;
+                    int_einnahmen = int_einnahmen * 12;
+                }
+                kaltmiete_gesamt_ergebnis.setText(Integer.toString(int_kaltmiete_gesamt));
+                einnahmen.setText(Integer.toString((int_einnahmen)));
 
             }
 
